@@ -22,24 +22,25 @@
     <input type="location" id="city" class="register-input" placeholder="City">
     <input type="location" id="state"class="register-small" placeholder="State">
     <input type="number" id="zip" class="register-small" placeholder="Zip" style="margin-left:5%">
-
-    <button onclick="funct1()" type="submit" class="register-button"> Next </button>
+    
+    <a href="/products">
+      <button onclick="funct1()" type="submit" class="register-button"> 
+          Next
+      </button>
+    </a>
 
     <script>
       var firebase = require("/node_modules/firebase");
       var myFirebaseRef = new firebase("https://bankhackathon.firebaseio.com/");
 
       function funct1(){
-        console.log("got here");
-
-
         myFirebaseRef.set({
           name: document.getElementById("name").value,
           placename: document.getElementById("placename").value,
-          "address" : document.getElementById("address").value,
-          "city" : document.getElementById("city").value,
-          "state": document.getElementById("state").value,
-          "zip" : document.getElementById("zip").value
+          address : document.getElementById("address").value,
+          city : document.getElementById("city").value,
+          state: document.getElementById("state").value,
+          zip : document.getElementById("zip").value
         });
       }
     </script>
