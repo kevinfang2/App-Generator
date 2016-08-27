@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A750C351D720E350029FAC6 /* ItemsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A750C341D720E350029FAC6 /* ItemsCollectionViewController.m */; };
+		4977D08F191AC01300AC621F /* libSimplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4977D088191ABFE200AC621F /* libSimplify.a */; };
+		4977D092191AC04700AC621F /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4977D08C191ABFE200AC621F /* Simplify.bundle */; };
+		7ED9E9F31917E2930082C2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F21917E2930082C2C3 /* Foundation.framework */; };
+		7ED9E9F51917E2930082C2C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F41917E2930082C2C3 /* CoreGraphics.framework */; };
+		7ED9E9F71917E2930082C2C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F61917E2930082C2C3 /* UIKit.framework */; };
+		7ED9E9FD1917E2930082C2C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ED9E9FB1917E2930082C2C3 /* InfoPlist.strings */; };
+		7ED9E9FF1917E2930082C2C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9E9FE1917E2930082C2C3 /* main.m */; };
+		7ED9EA031917E2930082C2C3 /* SIMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9EA021917E2930082C2C3 /* SIMAppDelegate.m */; };
+		7ED9EA051917E2930082C2C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED9EA041917E2930082C2C3 /* Images.xcassets */; };
+		7EF162301925555A008F805A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF1622F1925555A008F805A /* Storyboard.storyboard */; };
+		7EF162351925598B008F805A /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF162341925598B008F805A /* SIMProductViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4977D087191ABFE200AC621F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49748F5F191849C600738BC9;
+			remoteInfo = Simplify;
+		};
+		4977D089191ABFE200AC621F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49748F6F191849C600738BC9;
+			remoteInfo = SimplifyMerchantSDKTests;
+		};
+		4977D08B191ABFE200AC621F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4977D05D191AB89C00AC621F;
+			remoteInfo = SimplifyResources;
+		};
+		4977D08D191ABFFF00AC621F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 49748F5E191849C600738BC9;
+			remoteInfo = Simplify;
+		};
+		4977D090191AC02600AC621F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4977D05C191AB89C00AC621F;
+			remoteInfo = SimplifyResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A750C331D720E350029FAC6 /* ItemsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsCollectionViewController.h; sourceTree = "<group>"; };
+		0A750C341D720E350029FAC6 /* ItemsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsCollectionViewController.m; sourceTree = "<group>"; };
+		2CD3F7E51A793E5300A4DD48 /* SDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SDKDemo.entitlements; sourceTree = "<group>"; };
+		495EEF741923D0CA00AEC402 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		49748F4B191829A400738BC9 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = ocmock/libOCMock.a; sourceTree = "<group>"; };
+		49748F4D191829A400738BC9 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		49748F4E191829A400738BC9 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		49748F4F191829A400738BC9 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		49748F50191829A400738BC9 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		49748F51191829A400738BC9 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		49748F52191829A400738BC9 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimplifyMerchantSDK.xcodeproj; path = ../SimplifyMerchantSDK/SimplifyMerchantSDK.xcodeproj; sourceTree = "<group>"; };
+		7ED9E9EF1917E2930082C2C3 /* SimplifyApplePayTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplifyApplePayTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ED9E9F21917E2930082C2C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7ED9E9F41917E2930082C2C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7ED9E9F61917E2930082C2C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7ED9E9FA1917E2930082C2C3 /* SimplifySDKSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplifySDKSampleApp-Info.plist"; sourceTree = "<group>"; };
+		7ED9E9FC1917E2930082C2C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7ED9E9FE1917E2930082C2C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7ED9EA001917E2930082C2C3 /* SimplifySDKSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplifySDKSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		7ED9EA011917E2930082C2C3 /* SIMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SIMAppDelegate.h; sourceTree = "<group>"; };
+		7ED9EA021917E2930082C2C3 /* SIMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIMAppDelegate.m; sourceTree = "<group>"; };
+		7ED9EA041917E2930082C2C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7ED9EA0B1917E2930082C2C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7EF1622F1925555A008F805A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7EF162331925598B008F805A /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
+		7EF162341925598B008F805A /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ED9E9EC1917E2930082C2C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4977D08F191AC01300AC621F /* libSimplify.a in Frameworks */,
+				7ED9E9F51917E2930082C2C3 /* CoreGraphics.framework in Frameworks */,
+				7ED9E9F71917E2930082C2C3 /* UIKit.framework in Frameworks */,
+				7ED9E9F31917E2930082C2C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49748F4A191829A400738BC9 /* ocmock */ = {
+			isa = PBXGroup;
+			children = (
+				49748F4B191829A400738BC9 /* libOCMock.a */,
+				49748F4C191829A400738BC9 /* OCMock */,
+			);
+			name = ocmock;
+			path = ../vendor;
+			sourceTree = "<group>";
+		};
+		49748F4C191829A400738BC9 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				49748F4D191829A400738BC9 /* NSNotificationCenter+OCMAdditions.h */,
+				49748F4E191829A400738BC9 /* OCMArg.h */,
+				49748F4F191829A400738BC9 /* OCMConstraint.h */,
+				49748F50191829A400738BC9 /* OCMock.h */,
+				49748F51191829A400738BC9 /* OCMockObject.h */,
+				49748F52191829A400738BC9 /* OCMockRecorder.h */,
+			);
+			name = OCMock;
+			path = ocmock/OCMock;
+			sourceTree = "<group>";
+		};
+		4977D081191ABFE200AC621F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4977D088191ABFE200AC621F /* libSimplify.a */,
+				4977D08A191ABFE200AC621F /* SimplifyMerchantSDKTests.xctest */,
+				4977D08C191ABFE200AC621F /* Simplify.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ED9E9E61917E2930082C2C3 = {
+			isa = PBXGroup;
+			children = (
+				7ED9E9F81917E2930082C2C3 /* SimplifySDKSampleApp */,
+				7ED9E9F11917E2930082C2C3 /* Frameworks */,
+				7ED9E9F01917E2930082C2C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7ED9E9F01917E2930082C2C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ED9E9EF1917E2930082C2C3 /* SimplifyApplePayTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ED9E9F11917E2930082C2C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */,
+				495EEF741923D0CA00AEC402 /* QuartzCore.framework */,
+				49748F4A191829A400738BC9 /* ocmock */,
+				7ED9E9F21917E2930082C2C3 /* Foundation.framework */,
+				7ED9E9F41917E2930082C2C3 /* CoreGraphics.framework */,
+				7ED9E9F61917E2930082C2C3 /* UIKit.framework */,
+				7ED9EA0B1917E2930082C2C3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ED9E9F81917E2930082C2C3 /* SimplifySDKSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				0A750C331D720E350029FAC6 /* ItemsCollectionViewController.h */,
+				0A750C341D720E350029FAC6 /* ItemsCollectionViewController.m */,
+				2CD3F7E51A793E5300A4DD48 /* SDKDemo.entitlements */,
+				7ED9EA011917E2930082C2C3 /* SIMAppDelegate.h */,
+				7ED9EA021917E2930082C2C3 /* SIMAppDelegate.m */,
+				7EF162331925598B008F805A /* SIMProductViewController.h */,
+				7EF162341925598B008F805A /* SIMProductViewController.m */,
+				7EF1622F1925555A008F805A /* Storyboard.storyboard */,
+				7ED9EA041917E2930082C2C3 /* Images.xcassets */,
+				7ED9E9F91917E2930082C2C3 /* Supporting Files */,
+			);
+			path = SimplifySDKSampleApp;
+			sourceTree = "<group>";
+		};
+		7ED9E9F91917E2930082C2C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ED9E9FA1917E2930082C2C3 /* SimplifySDKSampleApp-Info.plist */,
+				7ED9E9FB1917E2930082C2C3 /* InfoPlist.strings */,
+				7ED9E9FE1917E2930082C2C3 /* main.m */,
+				7ED9EA001917E2930082C2C3 /* SimplifySDKSampleApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ED9E9EE1917E2930082C2C3 /* SimplifySDKSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ED9EA1B1917E2930082C2C3 /* Build configuration list for PBXNativeTarget "SimplifySDKSampleApp" */;
+			buildPhases = (
+				7ED9E9EB1917E2930082C2C3 /* Sources */,
+				7ED9E9EC1917E2930082C2C3 /* Frameworks */,
+				7ED9E9ED1917E2930082C2C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4977D091191AC02600AC621F /* PBXTargetDependency */,
+				4977D08E191ABFFF00AC621F /* PBXTargetDependency */,
+			);
+			name = SimplifySDKSampleApp;
+			productName = SimplifyiOSSDK;
+			productReference = 7ED9E9EF1917E2930082C2C3 /* SimplifyApplePayTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ED9E9E71917E2930082C2C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SIM;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MasterCard;
+				TargetAttributes = {
+					7ED9E9EE1917E2930082C2C3 = {
+						DevelopmentTeam = W82EHQ5KSA;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7ED9E9EA1917E2930082C2C3 /* Build configuration list for PBXProject "SimplifySDKSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7ED9E9E61917E2930082C2C3;
+			productRefGroup = 7ED9E9F01917E2930082C2C3 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4977D081191ABFE200AC621F /* Products */;
+					ProjectRef = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7ED9E9EE1917E2930082C2C3 /* SimplifySDKSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4977D088191ABFE200AC621F /* libSimplify.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSimplify.a;
+			remoteRef = 4977D087191ABFE200AC621F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4977D08A191ABFE200AC621F /* SimplifyMerchantSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SimplifyMerchantSDKTests.xctest;
+			remoteRef = 4977D089191ABFE200AC621F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4977D08C191ABFE200AC621F /* Simplify.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Simplify.bundle;
+			remoteRef = 4977D08B191ABFE200AC621F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ED9E9ED1917E2930082C2C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ED9E9FD1917E2930082C2C3 /* InfoPlist.strings in Resources */,
+				7EF162301925555A008F805A /* Storyboard.storyboard in Resources */,
+				7ED9EA051917E2930082C2C3 /* Images.xcassets in Resources */,
+				4977D092191AC04700AC621F /* Simplify.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ED9E9EB1917E2930082C2C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF162351925598B008F805A /* SIMProductViewController.m in Sources */,
+				7ED9EA031917E2930082C2C3 /* SIMAppDelegate.m in Sources */,
+				7ED9E9FF1917E2930082C2C3 /* main.m in Sources */,
+				0A750C351D720E350029FAC6 /* ItemsCollectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4977D08E191ABFFF00AC621F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Simplify;
+			targetProxy = 4977D08D191ABFFF00AC621F /* PBXContainerItemProxy */;
+		};
+		4977D091191AC02600AC621F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimplifyResources;
+			targetProxy = 4977D090191AC02600AC621F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7ED9E9FB1917E2930082C2C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ED9E9FC1917E2930082C2C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7ED9EA191917E2930082C2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7ED9EA1A1917E2930082C2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7ED9EA1C1917E2930082C2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SDKDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplifySDKSampleApp/SimplifySDKSampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers",
+				);
+				INFOPLIST_FILE = "SimplifySDKSampleApp/SimplifySDKSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplify;
+				PRODUCT_NAME = SimplifyApplePayTest;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7ED9EA1D1917E2930082C2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SDKDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplifySDKSampleApp/SimplifySDKSampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers",
+				);
+				INFOPLIST_FILE = "SimplifySDKSampleApp/SimplifySDKSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplify;
+				PRODUCT_NAME = SimplifyApplePayTest;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ED9E9EA1917E2930082C2C3 /* Build configuration list for PBXProject "SimplifySDKSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED9EA191917E2930082C2C3 /* Debug */,
+				7ED9EA1A1917E2930082C2C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ED9EA1B1917E2930082C2C3 /* Build configuration list for PBXNativeTarget "SimplifySDKSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED9EA1C1917E2930082C2C3 /* Debug */,
+				7ED9EA1D1917E2930082C2C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ED9E9E71917E2930082C2C3 /* Project object */;
+}
