@@ -1,0 +1,23 @@
+{
+  "name": "bank-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinfang2/bank-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinfang2/bank-hackathon/issues"
+  },
+  "homepage": "https://github.com/kevinfang2/bank-hackathon#readme",
+  "dependencies": {
+    "browserify": "^13.1.0"
+  }
+}
