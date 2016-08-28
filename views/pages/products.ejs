@@ -55,7 +55,7 @@
 
     <input type="location" id="name" class="register-input" placeholder="Product Name">
     <input type="name" id="description" class="register-input" placeholder="Product Description">
-    <input type="name" id="cost" class="register-input" placeholder="Product Cost">
+    <input type="number"  step=".01" min=”0″ id="cost" class="register-input" placeholder="Product Cost"/>
     <div id="sketchthing"> </div>
     <input type="button" onclick="funct1()" type="submit" class="register-button" value = "Add More">
     <button onclick="funct2()" type="submit" class="register-button"> Done </button>
@@ -114,6 +114,7 @@
           funct1()
           $.post('/submit')
       }
+
     </script>
   </form>
 
