@@ -6,10 +6,14 @@
 //  Copyright © 2016 MasterCard. All rights reserved.
 //
 
-#import "ItemCollectionViewCell.h"
 #import "ItemsViewController.h"
 
-@interface ItemsViewController ()
+@interface ItemsViewController (){
+    NSMutableArray *titles;
+    NSMutableArray *images;
+    NSMutableArray *costs;
+    
+}
 
 @property (weak, nonatomic) IBOutlet UICollectionView *itemsCollectionView;
 
@@ -40,8 +44,26 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     // Placeholder cell for items
-    ItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor greenColor];
+    
+    UILabel *costLabel = (UILabel *)[cell viewWithTag:96];
+    costLabel.text = costs[indexPath.row];
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:98];
+    nameLabel.text = titles[indexPath.row];
+    
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+    imageView.layer.cornerRadius = 5;
+    imageView.layer.masksToBounds = YES;
+    
+    NSLog(@"fwedwe %@", images[indexPath.row]);
+    NSString*base64String = @" ";
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+    
+    UIImage * image = [UIImage imageWithData: decodedData];
+    imageView.image = image;
+    
     return cell;
 }
 

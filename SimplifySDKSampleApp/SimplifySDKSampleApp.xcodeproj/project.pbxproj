@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EE065C31D724E41008C1216 /* ItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C21D724E41008C1216 /* ItemCollectionViewCell.m */; };
 		1EE065C91D724E52008C1216 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C61D724E52008C1216 /* ItemsViewController.m */; };
 		1EE065CA1D724E52008C1216 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C81D724E52008C1216 /* SIMProductViewController.m */; };
 		4977D08F191AC01300AC621F /* libSimplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4977D088191ABFE200AC621F /* libSimplify.a */; };
@@ -61,8 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EE065C11D724E41008C1216 /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionViewCell.h; sourceTree = "<group>"; };
-		1EE065C21D724E41008C1216 /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionViewCell.m; sourceTree = "<group>"; };
 		1EE065C51D724E52008C1216 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		1EE065C61D724E52008C1216 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		1EE065C71D724E52008C1216 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
@@ -110,8 +107,6 @@
 		1EE065C01D724E41008C1216 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EE065C11D724E41008C1216 /* ItemCollectionViewCell.h */,
-				1EE065C21D724E41008C1216 /* ItemCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE065C31D724E41008C1216 /* ItemCollectionViewCell.m in Sources */,
 				1EE065C91D724E52008C1216 /* ItemsViewController.m in Sources */,
 				7ED9EA031917E2930082C2C3 /* SIMAppDelegate.m in Sources */,
 				1EE065CA1D724E52008C1216 /* SIMProductViewController.m in Sources */,
