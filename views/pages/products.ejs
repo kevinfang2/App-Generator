@@ -113,10 +113,12 @@
       function funct2() {
           shouldExtendPage = false;
           funct1()
-          var link = document.createElement("a");
-          link.download = "";
-          link.href = '/submit';
-          link.click();
+          setTimeout(function(){
+              var link = document.createElement("a");
+              link.download = "";
+              link.href = '/submit';
+              link.click();
+          }, 4000);
       }
 
     </script>

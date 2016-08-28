@@ -93,8 +93,9 @@
 #pragma mark - Collection View Selection
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"ShowProduct" sender:self];
     index = indexPath.row;
+
+    [self performSegueWithIdentifier:@"ShowProduct" sender:self];
 }
 
 
