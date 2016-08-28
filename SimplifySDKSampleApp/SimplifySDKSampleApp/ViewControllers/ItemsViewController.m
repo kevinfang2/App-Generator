@@ -30,6 +30,14 @@
 
     [_itemsCollectionView setDelegate:self];
     [_itemsCollectionView setDataSource:self];
+    titles = [[NSMutableArray alloc] init];
+    images = [[NSMutableArray alloc] init];
+    costs = [[NSMutableArray alloc] init];
+    [titles addObject:@"meme"];
+    [costs addObject:@"10.9"];
+    [images addObject:[UIImage imageNamed:@"simplifylogo.png"]];
+    NSLog(@"meme");
+    NSLog(@"%@", titles);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +48,7 @@
 #pragma mark - Collection View Data
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return titles.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,12 +66,12 @@
     imageView.layer.cornerRadius = 5;
     imageView.layer.masksToBounds = YES;
 
-    NSLog(@"fwedwe %@", images[indexPath.row]);
-    NSString*base64String = @" ";
-    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+    NSLog(@"fwedwe %@", titles[indexPath.row]);
+//    NSString*base64String = @" ";
+//    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
 
-    UIImage * image = [UIImage imageWithData: decodedData];
-    imageView.image = image;
+//    UIImage * image = [UIImage imageWithData: decodedData];
+    imageView.image = images[indexPath.row];
 
     return cell;
 }

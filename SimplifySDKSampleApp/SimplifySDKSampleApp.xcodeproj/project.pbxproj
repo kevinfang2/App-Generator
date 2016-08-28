@@ -104,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FA2DDF1D72857900F0E013 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1EE065C41D724E52008C1216 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +200,7 @@
 			children = (
 				1EE065CB1D724E58008C1216 /* Entities */,
 				1EE065C41D724E52008C1216 /* ViewControllers */,
+				00FA2DDF1D72857900F0E013 /* Images */,
 				2CD3F7E51A793E5300A4DD48 /* SDKDemo.entitlements */,
 				7ED9EA011917E2930082C2C3 /* SIMAppDelegate.h */,
 				7ED9EA021917E2930082C2C3 /* SIMAppDelegate.m */,
