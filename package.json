@@ -133,6 +133,7 @@
     "getpass": "^0.1.6",
     "glob": "^5.0.15",
     "graceful-fs": "^4.1.6",
+    "googleapis": "^12.4.0",
     "graceful-readlink": "^1.0.1",
     "har-validator": "^2.0.6",
     "has": "^1.0.1",

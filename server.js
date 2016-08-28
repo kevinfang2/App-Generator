@@ -6,8 +6,8 @@ var firebase = require('firebase');
 var sleep = require('sleep');
 var archiver = require('archiver');
 
-app.set('view engine', 'ejs');
 
+app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname));
 
@@ -17,8 +17,9 @@ app.get('/', function (req, res) {
 
 app.get('/products', function(req, res) {
 	res.render('pages/products');
- 	// res.render('products.ejs', {root: __dirname})
 });
+
+
 
 String.prototype.format = function() {
     var s = this,
@@ -81,6 +82,7 @@ app.get('/submit', function (req, res) {
 	archive.directory(directory);
 	archive.finalize();
 });
+
 
 app.listen(3141)
 console.log('3141');
