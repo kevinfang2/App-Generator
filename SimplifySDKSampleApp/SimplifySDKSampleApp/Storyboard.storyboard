@@ -216,6 +216,7 @@
                         <outlet property="descriptionLabel" destination="9ee-p3-hqJ" id="Jyg-Sm-fBH"/>
                         <outlet property="priceImage" destination="IRK-Wy-4cq" id="T17-ui-KMH"/>
                         <outlet property="priceLabel" destination="VpK-81-Tkh" id="hxW-Go-CCQ"/>
+                        <outlet property="productImage" destination="ZFk-dI-ZHr" id="roD-sy-rI0"/>
                         <outlet property="titleLabel" destination="fsN-is-0Hk" id="9yt-hT-iK0"/>
                     </connections>
                 </viewController>
