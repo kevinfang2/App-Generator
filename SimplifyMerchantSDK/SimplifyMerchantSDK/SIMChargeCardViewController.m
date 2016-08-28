@@ -324,9 +324,11 @@
                          if (error) {
                              completion(PKPaymentAuthorizationStatusFailure);
                              [self.delegate creditCardTokenFailedWithError:error];
+                             NSLog(@"error is %@",error);
                          } else {
                              completion(PKPaymentAuthorizationStatusSuccess);
                              [self.delegate creditCardTokenProcessed:cardToken];
+                             NSLog(@"successfuly generated cardToken %@", cardToken.token);
                          }
                      }];
                  }];
