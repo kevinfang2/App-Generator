@@ -69,37 +69,35 @@ app.post('/submit', function (req, res) {
         });
     });
 
-	var output = fs.createWriteStream('target.zip');
+	// res.writeHead(3141, {
+ //        'Content-Type': 'application/zip',
+ //        'Content-disposition': 'attachment; filename=target.zip'
+ //    });
+
 	var archive = archiver('zip');
 
-	output.on('close', function () {
-	    console.log(archive.pointer() + ' total bytes');
-	    console.log('archiver has been finalized and the output file descriptor has closed.');
-	});
 
-	archive.on('error', function(err){
-	    throw err;
-	});
-
-	archive.pipe(output);
+    archive.pipe(res);
 
 	archive.bulk([
 	    { expand: true, cwd: './SimplifySDKSampleApp', src: ['**'], dest: './'}
 	]);
+
 	archive.finalize();
 
-	var formData = {
-	  file: fs.createReadStream('./target.zip'),
-	};
-	request.post({url:'https://file.io', formData: formData}, function optionalCallback(err, httpResponse, body) {
-	  if (err) {
-	    return console.error('upload failed:', err);
-	  }
-	  console.log('Upload successful!  Server responded with:', body);
-	  var obj = JSON.parse(body);
-	  console.log("link is " + obj.link)
-	  open(obj.link);
-	});
+	// var formData = {
+	//   file: fs.createReadStream('./target.zip'),
+	// };
+	// request.post({method:"POST", url:'https://file.io', encoding:null, formData: formData}, function (err, httpResponse, body) {
+	//   if (err) {
+	//     return console.error('upload failed:', err);
+	//   }
+	//   console.log('Upload successful!  Server responded with:', body);
+	//   var obj = JSON.parse(body);
+	//   console.log("link is " + obj.link)
+	//   open(obj.link);
+	// });
+
 });
 
 
