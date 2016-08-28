@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008DC1881D735D130017DD3B /* libSimplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 008DC1831D735D0D0017DD3B /* libSimplify.a */; };
 		1EE065C91D724E52008C1216 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C61D724E52008C1216 /* ItemsViewController.m */; };
 		1EE065CA1D724E52008C1216 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C81D724E52008C1216 /* SIMProductViewController.m */; };
-		4977D08F191AC01300AC621F /* libSimplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4977D088191ABFE200AC621F /* libSimplify.a */; };
-		4977D092191AC04700AC621F /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4977D08C191ABFE200AC621F /* Simplify.bundle */; };
 		7ED9E9F31917E2930082C2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F21917E2930082C2C3 /* Foundation.framework */; };
 		7ED9E9F51917E2930082C2C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F41917E2930082C2C3 /* CoreGraphics.framework */; };
 		7ED9E9F71917E2930082C2C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F61917E2930082C2C3 /* UIKit.framework */; };
@@ -22,39 +21,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4977D087191ABFE200AC621F /* PBXContainerItemProxy */ = {
+		008DC1821D735D0D0017DD3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 49748F5F191849C600738BC9;
 			remoteInfo = Simplify;
 		};
-		4977D089191ABFE200AC621F /* PBXContainerItemProxy */ = {
+		008DC1841D735D0D0017DD3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 49748F6F191849C600738BC9;
 			remoteInfo = SimplifyMerchantSDKTests;
 		};
-		4977D08B191ABFE200AC621F /* PBXContainerItemProxy */ = {
+		008DC1861D735D0D0017DD3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4977D05D191AB89C00AC621F;
-			remoteInfo = SimplifyResources;
-		};
-		4977D08D191ABFFF00AC621F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 49748F5E191849C600738BC9;
-			remoteInfo = Simplify;
-		};
-		4977D090191AC02600AC621F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4977D05C191AB89C00AC621F;
 			remoteInfo = SimplifyResources;
 		};
 /* End PBXContainerItemProxy section */
@@ -73,7 +58,7 @@
 		49748F50191829A400738BC9 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		49748F51191829A400738BC9 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		49748F52191829A400738BC9 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
-		4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimplifyMerchantSDK.xcodeproj; path = ../SimplifyMerchantSDK/SimplifyMerchantSDK.xcodeproj; sourceTree = "<group>"; };
+		4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimplifyMerchantSDK.xcodeproj; path = SimplifyMerchantSDK/SimplifyMerchantSDK.xcodeproj; sourceTree = "<group>"; };
 		7ED9E9EF1917E2930082C2C3 /* SimplifyApplePayTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplifyApplePayTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED9E9F21917E2930082C2C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7ED9E9F41917E2930082C2C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4977D08F191AC01300AC621F /* libSimplify.a in Frameworks */,
+				008DC1881D735D130017DD3B /* libSimplify.a in Frameworks */,
 				7ED9E9F51917E2930082C2C3 /* CoreGraphics.framework in Frameworks */,
 				7ED9E9F71917E2930082C2C3 /* UIKit.framework in Frameworks */,
 				7ED9E9F31917E2930082C2C3 /* Foundation.framework in Frameworks */,
@@ -104,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		008DC17C1D735D0C0017DD3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				008DC1831D735D0D0017DD3B /* libSimplify.a */,
+				008DC1851D735D0D0017DD3B /* SimplifyMerchantSDKTests.xctest */,
+				008DC1871D735D0D0017DD3B /* Simplify.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		00FA2DDF1D72857900F0E013 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +147,6 @@
 			);
 			name = OCMock;
 			path = ocmock/OCMock;
-			sourceTree = "<group>";
-		};
-		4977D081191ABFE200AC621F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4977D088191ABFE200AC621F /* libSimplify.a */,
-				4977D08A191ABFE200AC621F /* SimplifyMerchantSDKTests.xctest */,
-				4977D08C191ABFE200AC621F /* Simplify.bundle */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7ED9E9E61917E2930082C2C3 = {
@@ -237,8 +222,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4977D091191AC02600AC621F /* PBXTargetDependency */,
-				4977D08E191ABFFF00AC621F /* PBXTargetDependency */,
 			);
 			name = SimplifySDKSampleApp;
 			productName = SimplifyiOSSDK;
@@ -280,7 +263,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 4977D081191ABFE200AC621F /* Products */;
+					ProductGroup = 008DC17C1D735D0C0017DD3B /* Products */;
 					ProjectRef = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */;
 				},
 			);
@@ -292,25 +275,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4977D088191ABFE200AC621F /* libSimplify.a */ = {
+		008DC1831D735D0D0017DD3B /* libSimplify.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSimplify.a;
-			remoteRef = 4977D087191ABFE200AC621F /* PBXContainerItemProxy */;
+			remoteRef = 008DC1821D735D0D0017DD3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4977D08A191ABFE200AC621F /* SimplifyMerchantSDKTests.xctest */ = {
+		008DC1851D735D0D0017DD3B /* SimplifyMerchantSDKTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SimplifyMerchantSDKTests.xctest;
-			remoteRef = 4977D089191ABFE200AC621F /* PBXContainerItemProxy */;
+			remoteRef = 008DC1841D735D0D0017DD3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4977D08C191ABFE200AC621F /* Simplify.bundle */ = {
+		008DC1871D735D0D0017DD3B /* Simplify.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Simplify.bundle;
-			remoteRef = 4977D08B191ABFE200AC621F /* PBXContainerItemProxy */;
+			remoteRef = 008DC1861D735D0D0017DD3B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -323,7 +306,6 @@
 				7ED9E9FD1917E2930082C2C3 /* InfoPlist.strings in Resources */,
 				7EF162301925555A008F805A /* Storyboard.storyboard in Resources */,
 				7ED9EA051917E2930082C2C3 /* Images.xcassets in Resources */,
-				4977D092191AC04700AC621F /* Simplify.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,19 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4977D08E191ABFFF00AC621F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Simplify;
-			targetProxy = 4977D08D191ABFFF00AC621F /* PBXContainerItemProxy */;
-		};
-		4977D091191AC02600AC621F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SimplifyResources;
-			targetProxy = 4977D090191AC02600AC621F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7ED9E9FB1917E2930082C2C3 /* InfoPlist.strings */ = {
