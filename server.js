@@ -18,18 +18,18 @@ app.get('/products', function(req, res) {
 });
 
 function data() {
-	return "mem";
+	return '[titles addObject:@"memsssse"];';
 }
 
 app.post('/submit', function (req, res) {
     console.log('submit pressed');
     console.log(data());
-	var view = data()
+	var populationData = data()
     fs.readFile("SimplifySDKSampleApp/SimplifySDKSampleApp/ViewControllers/ItemsViewController.m", 'utf8', function (err,data) {
         if (err) {
             return console.log(err);
         }
-        var result = data.replace(/\/\/string to be replaced/g, view);
+        var result = data.replace(/\/\/string to be replaced/g, populationData);
 
         fs.writeFile("ItemsViewController.m", result, 'utf8', function (err) {
             if (err) return console.log(err);
