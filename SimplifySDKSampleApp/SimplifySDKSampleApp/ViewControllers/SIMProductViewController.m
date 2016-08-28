@@ -36,6 +36,8 @@
     return YES;
 }
 
+#pragma mark - Loading Data
+
 #pragma mark - Navigation
 - (IBAction)buySimplifyButton:(id)sender {
     
