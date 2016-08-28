@@ -63,18 +63,10 @@
     <script>
       var firebase = require("/node_modules/firebase");
       var myFirebaseRef = new firebase("https://bankhackathon.firebaseio.com/");
-      var postsRef = myFirebaseRef.child("items");
       var shouldExtendPage = true;
 
       function funct1(){
-        console.log("got here");
-
-        postsRef.push().set({
-          Name: document.getElementById("name").value,
-          Description: document.getElementById("description").value,
-          cost: document.getElementById("cost").value,
-          image : btoa(document.getElementById("myFile").files),
-        });
+     	base64();
         if (shouldExtendPage) {
             extendPage()
         }
@@ -83,8 +75,37 @@
         }
       }
 
+     var image = "";
+     function base64(){
+       	var filesSelected = document.getElementById("myFile").files;
+ 	    if (filesSelected.length > 0) {
+ 	      	var fileToLoad = filesSelected[0];
+
+ 	      	var fileReader = new FileReader();
+
+ 	      	fileReader.onload = function(fileLoadedEvent) {
+     	      	var srcData = fileLoadedEvent.target.result; // <--- data: base64
+
+     			image = srcData
+     			console.log(srcData)
+
+     	      	uploadToFirebase();
+ 	      	}
+ 	      	fileReader.readAsDataURL(fileToLoad);
+ 	    }
+    }
+
+     function uploadToFirebase(){
+       	myFirebaseRef.child('items').push().set({
+     	    Name: document.getElementById("name").value,
+         	Description: document.getElementById("description").value,
+           	cost: document.getElementById("cost").value,
+           	image : image
+         });
+     }
+
       function extendPage(){
-          $('#sketchthing').append('  <br><br><input type="file" id="myFile" multiple size="50" onchange="myFunction()"><br><p id="demo"></p><br><input type="location" id="name" class="register-input" placeholder="Product Name"><input    type="name" id="description" class="register-input" placeholder="Product Description">');
+          $('#sketchthing').append('<br><br><input type="file" id="myFile" multiple size="50" onchange="myFunction()"><br><p id="demo"></p><br><input type="location" id="name" class="register-input" placeholder="Product Name"><input    type="name" id="description" class="register-input" placeholder="Product Description">');
           shouldExtendPage = true;
       }
 

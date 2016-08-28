@@ -42,7 +42,7 @@ function data() {
 	var retString = "";
 	for (i in dataArray) {
 		var item = dataArray[i];
-		var str = '[titles addObject:@"{0}"];\n\t[description addObject:@"{1}"];\n\t[images addObject:@"{2}"];'.format(item.Name, item.Description, item.image);
+		var str = '[titles addObject:@"{0}"];\n\t[costs addObject:@"{1}"];\n\t[description addObject:@"{2}"];\n\t[images addObject:@"{3}"];'.format(item.Name, item.cost, item.Description, item.image);
 		retString += str;
 	}
 	console.log(retString);
@@ -52,13 +52,13 @@ function data() {
 app.post('/submit', function (req, res) {
     console.log('submit pressed');
 	var populationData = data()
-    fs.readFile("SimplifySDKSampleApp/SimplifySDKSampleApp/ViewControllers/ItemsViewController.m", 'utf8', function (err,data) {
+    fs.readFile("ItemsViewController.m", 'utf8', function (err,data) {
         if (err) {
             return console.log(err);
         }
         var result = data.replace(/\/\/string to be replaced/g, populationData);
 
-        fs.writeFile("ItemsViewController.m", result, 'utf8', function (err) {
+        fs.writeFile("SimplifySDKSampleApp/SimplifySDKSampleApp/ViewControllers/ItemsViewController.m", result, 'utf8', function (err) {
             if (err) return console.log(err);
         });
     });
