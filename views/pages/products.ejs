@@ -57,7 +57,7 @@
     <input type="name" id="description" class="register-input" placeholder="Product Description">
 
     <button onclick="funct1()" type="submit" class="register-button"> Add more </button>
-    <button onclick="funct1()" type="submit" class="register-button"> Done </button>
+    <button onclick="funct2()" type="submit" class="register-button"> Done </button>
 
     <script>
       var firebase = require("/node_modules/firebase");
@@ -72,6 +72,10 @@
           image : btoa(document.getElementById("myFile").files),
         });
       }
+
+      function funct2() {
+          $.post('/submit')
+      }
     </script>
   </form>
 
@@ -79,5 +83,3 @@
 
 
 </html>
-
-
