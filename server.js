@@ -3,7 +3,6 @@ var path = require('path');
 var fs = require('fs');
 var app = express();
 var firebase = require('firebase');
-var sleep = require('sleep');
 var archiver = require('archiver');
 
 
@@ -45,7 +44,7 @@ function data() {
 	var retString = "";
 	for (i in dataArray) {
 		var item = dataArray[i];
-		var str = '[titles addObject:@"{0}"];\n\t[costs addObject:@"{1}"];\n\t[description addObject:@"{2}"];\n\t[images addObject:@"{3}"];'.format(item.Name, item.cost, item.Description, item.image.replace("data:image/png;base64,",""));
+		var str = '[titles addObject:@"{0}"];\n\t[costs addObject:@"{1}"];\n\t[description addObject:@"{2}"];\n\t[images addObject:@"{3}"];'.format(item.Name, item.cost, item.Description, item.image.replace("data:image/jpeg;base64,","").replace("data:image/png;base64,",""));
 		retString += str;
 	}
 	return retString;
