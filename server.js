@@ -12,11 +12,10 @@ app.get('/', function (req, res) {
 	res.render('pages/form');
 });
 
-.get('/products', function(req, res) {
+app.get('/products', function(req, res) {
 	res.render('pages/products');
  	// res.render('products.ejs', {root: __dirname})
 });
 
-app.listen(3141) 
+app.listen(3141)
 console.log('3141');
-
