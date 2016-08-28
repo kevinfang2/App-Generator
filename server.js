@@ -59,14 +59,14 @@ app.get('/submit', function (req, res) {
         }
         var result = data.replace(/\/\/string to be replaced/g, populationData);
 
-        fs.writeFile("SimplifySDKSampleApp/SimplifySDKSampleApp/ViewControllers/ItemsViewController.m", result, 'utf8', function (err) {
+        fs.writeFile("App/SimplifySDKSampleApp/SimplifySDKSampleApp/ViewControllers/ItemsViewController.m", result, 'utf8', function (err) {
             if (err) return console.log(err);
         });
     });
 
 	var archive = archiver.create('zip', {});
 	res.setHeader('Content-Type', 'application/zip');
-	res.attachment('SimplifySDKSampleApp.zip');
+	res.attachment('App/SimplifySDKSampleApp.zip');
 	archive.on('error', function(err) {
 		res.status(500).send({error: err.message});
 	});
@@ -77,7 +77,7 @@ app.get('/submit', function (req, res) {
 	});
 	//this is the streaming magic
 	archive.pipe(res);
-	var directory = 'SimplifySDKSampleApp/';
+	var directory = 'App';
 	archive.directory(directory);
 	archive.finalize();
 });

@@ -21,7 +21,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rln-Ih-lMp">
                                 <rect key="frame" x="8" y="72" width="584" height="528"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5km-Jv-Jwy">
                                     <size key="itemSize" width="182" height="187"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,14 +40,26 @@
                                                     <rect key="frame" x="8" y="8" width="166" height="113"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="96" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2K-6R-Dsr">
-                                                    <rect key="frame" x="8" y="158" width="166" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="98" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbn-x8-tAO">
+                                                    <rect key="frame" x="8" y="130" width="166" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="98" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbn-x8-tAO">
-                                                    <rect key="frame" x="8" y="129" width="166" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="price" translatesAutoresizingMaskIntoConstraints="NO" id="miz-ro-67T" userLabel="PriceImage">
+                                                    <rect key="frame" x="109" y="0.0" width="73" height="73"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="96" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZE-xN-dhV" userLabel="PriceLabel">
+                                                    <rect key="frame" x="117" y="2" width="58" height="73"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="58" id="nJ3-QE-gUf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.94509803920000002" green="0.39607843139999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdF-u1-5aO">
+                                                    <rect key="frame" x="12" y="158" width="158" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -55,23 +67,31 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="BHd-19-xNL" secondAttribute="trailing" constant="8" id="09r-qU-F7b"/>
+                                            <constraint firstItem="miz-ro-67T" firstAttribute="centerX" secondItem="GZE-xN-dhV" secondAttribute="centerX" constant="-0.5" id="19J-Wj-LtV"/>
+                                            <constraint firstItem="QdF-u1-5aO" firstAttribute="top" secondItem="sbn-x8-tAO" secondAttribute="bottom" constant="7" id="1wD-8R-cPv"/>
                                             <constraint firstItem="BHd-19-xNL" firstAttribute="leading" secondItem="eoM-RN-zgr" secondAttribute="leading" constant="8" id="20R-PM-ce9"/>
-                                            <constraint firstItem="C2K-6R-Dsr" firstAttribute="leading" secondItem="eoM-RN-zgr" secondAttribute="leading" constant="8" id="CCl-F2-VWN"/>
-                                            <constraint firstAttribute="trailing" secondItem="C2K-6R-Dsr" secondAttribute="trailing" constant="8" id="FfP-Yg-jIU"/>
-                                            <constraint firstItem="sbn-x8-tAO" firstAttribute="top" secondItem="BHd-19-xNL" secondAttribute="bottom" constant="8" id="N1z-QZ-YDt"/>
+                                            <constraint firstAttribute="trailing" secondItem="miz-ro-67T" secondAttribute="trailing" id="4CM-5D-tfH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="QdF-u1-5aO" secondAttribute="trailing" constant="4" id="7LQ-gK-N5f"/>
+                                            <constraint firstItem="sbn-x8-tAO" firstAttribute="top" secondItem="miz-ro-67T" secondAttribute="bottom" constant="57" id="Aeh-mr-0vD"/>
+                                            <constraint firstItem="miz-ro-67T" firstAttribute="top" secondItem="eoM-RN-zgr" secondAttribute="top" id="Ivb-23-wcf"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="QdF-u1-5aO" secondAttribute="bottom" id="Kxv-em-fMa"/>
+                                            <constraint firstItem="sbn-x8-tAO" firstAttribute="top" secondItem="BHd-19-xNL" secondAttribute="bottom" constant="9" id="N1z-QZ-YDt"/>
                                             <constraint firstItem="BHd-19-xNL" firstAttribute="top" secondItem="eoM-RN-zgr" secondAttribute="top" constant="8" id="RV0-En-nJF"/>
-                                            <constraint firstAttribute="bottom" secondItem="C2K-6R-Dsr" secondAttribute="bottom" constant="8" id="VTd-n4-Oep"/>
                                             <constraint firstItem="sbn-x8-tAO" firstAttribute="leading" secondItem="eoM-RN-zgr" secondAttribute="leading" constant="8" id="X35-zN-VGr"/>
-                                            <constraint firstItem="C2K-6R-Dsr" firstAttribute="top" secondItem="sbn-x8-tAO" secondAttribute="bottom" constant="8" id="qTZ-Ak-XX3"/>
+                                            <constraint firstItem="miz-ro-67T" firstAttribute="leading" secondItem="eoM-RN-zgr" secondAttribute="leading" constant="109" id="Y1t-cS-x94"/>
+                                            <constraint firstItem="miz-ro-67T" firstAttribute="top" secondItem="GZE-xN-dhV" secondAttribute="top" constant="-2" id="ahB-bg-fph"/>
+                                            <constraint firstItem="QdF-u1-5aO" firstAttribute="leading" secondItem="eoM-RN-zgr" secondAttribute="leadingMargin" constant="4" id="f1B-HZ-taH"/>
+                                            <constraint firstItem="miz-ro-67T" firstAttribute="centerY" secondItem="GZE-xN-dhV" secondAttribute="centerY" constant="-2" id="lng-J2-Ler"/>
                                             <constraint firstAttribute="trailing" secondItem="sbn-x8-tAO" secondAttribute="trailing" constant="8" id="s9g-tg-rxG"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8xa-Rd-U0m" firstAttribute="top" secondItem="rln-Ih-lMp" secondAttribute="bottom" id="1XS-ve-weB"/>
                             <constraint firstItem="rln-Ih-lMp" firstAttribute="leading" secondItem="I89-ZV-VxL" secondAttribute="leading" constant="8" id="Fxo-Jq-03X"/>
