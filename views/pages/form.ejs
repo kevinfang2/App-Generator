@@ -24,7 +24,7 @@
     <input type="number" id="zip" class="register-small" placeholder="Zip" style="margin-left:5%">
 
     <a href="/products">
-      <button onclick="funct1()" type="submit" class="register-button"> 
+      <button onclick="funct1()" type="button" class="register-button"> 
         Next
       </button>
     </a>
@@ -35,7 +35,7 @@
 
       function funct1(){
         console.log("got here");
-        
+
         myFirebaseRef.set({
           name: document.getElementById("name").value,
           placename: document.getElementById("placename").value,
@@ -51,5 +51,3 @@
 
 
 </html>
-
-
