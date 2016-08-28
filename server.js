@@ -3,9 +3,13 @@ var path = require('path');
 var fs = require('fs');
 var app = express();
 var firebase = require('firebase');
+var archiver = require('archiver');
+var request = require('request');
+var FormData = require('form-data');
+var open = require('open');
+
 
 app.set('view engine', 'ejs');
-
 
 app.use(express.static(__dirname));
 
@@ -15,8 +19,9 @@ app.get('/', function (req, res) {
 
 app.get('/products', function(req, res) {
 	res.render('pages/products');
- 	// res.render('products.ejs', {root: __dirname})
 });
+
+
 
 String.prototype.format = function() {
     var s = this,
@@ -42,11 +47,11 @@ function data() {
 	var retString = "";
 	for (i in dataArray) {
 		var item = dataArray[i];
-		console.log(item);
+		// console.log(item);
 		var str = '[titles addObject:@"{0}"];\n\t[costs addObject:@"{1}"];\n\t[description addObject:@"{2}"];\n\t[images addObject:@"{3}"];'.format(item.Name, item.cost, item.Description, item.image.replace("data:image/png;base64,",""));
 		retString += str;
 	}
-	console.log(retString);
+	// console.log(retString);
 	return retString;
 }
 
@@ -63,7 +68,49 @@ app.post('/submit', function (req, res) {
             if (err) return console.log(err);
         });
     });
+
+	var output = fs.createWriteStream('target.zip');
+	var archive = archiver('zip');
+
+	output.on('close', function () {
+	    console.log(archive.pointer() + ' total bytes');
+	    console.log('archiver has been finalized and the output file descriptor has closed.');
+	});
+
+	archive.on('error', function(err){
+	    throw err;
+	});
+
+	archive.pipe(output);
+
+	archive.bulk([
+	    { expand: true, cwd: './SimplifySDKSampleApp', src: ['**'], dest: './'}
+	]);
+	archive.finalize();
+
+	var formData = {
+	  file: fs.createReadStream('./target.zip'),
+	};
+	request.post({url:'https://file.io', formData: formData}, function optionalCallback(err, httpResponse, body) {
+	  if (err) {
+	    return console.error('upload failed:', err);
+	  }
+	  console.log('Upload successful!  Server responded with:', body);
+	  var obj = JSON.parse(body);
+	  console.log("link is " + obj.link)
+	  open(obj.link);
+	});
 });
+
 
 app.listen(3141)
 console.log('3141');
+
+
+
+
+
+
+
+
+
