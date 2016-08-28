@@ -7,7 +7,6 @@
 //
 
 #import "ItemsViewController.h"
-#import "ItemCollectionViewCell.h"
 #import "SIMProductViewController.h"
 
 @interface ItemsViewController (){
