@@ -21,9 +21,12 @@
 {
     [super viewDidLoad];
     self.priceLabel.text = self.price;
-    self.titleLabel.text = self.title;
-    self.productImage.image = self.image;
-    self.descriptionLabel.text = self.description;
+    self.titleLabel.text = self.title123;
+    
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:self.image options:0];
+    self.productImage.image = [UIImage imageWithData: decodedData];
+    
+    self.descriptionLabel.text = self.description123;
     
     self.primaryColor = [UIColor colorWithRed:241.0/255.0 green:100.0/255.0 blue:33.0/255.0 alpha:1.0];
     [self.buyButton setBackgroundColor:self.primaryColor];
@@ -47,7 +50,7 @@
     
     PKPaymentSummaryItem *mposButtons = [[PKPaymentSummaryItem alloc] init];
     mposButtons.label = @"mPOS Buttons";
-    mposButtons.amount = [[NSDecimalNumber alloc] initWithString:@"0.50"];
+    mposButtons.amount = [[NSDecimalNumber alloc] initWithString:self.price];
     
     PKPaymentRequest* paymentRequest = [[PKPaymentRequest alloc] init];
     paymentRequest.supportedNetworks = @[PKPaymentNetworkAmex, PKPaymentNetworkMasterCard, PKPaymentNetworkVisa];
@@ -55,7 +58,7 @@
     paymentRequest.currencyCode = @"USD";
     
     //2. SDKDemo.entitlements needs to be updated to use the new merchant id
-    paymentRequest.merchantIdentifier = @"<#INSERT_YOUR_MERCHANT_ID_HERE#>";
+    paymentRequest.merchantIdentifier = @"merchant.simplify";
     
     paymentRequest.merchantCapabilities = PKMerchantCapabilityEMV | PKMerchantCapability3DS;
     paymentRequest.paymentSummaryItems = @[mposButtons];
@@ -64,7 +67,7 @@
     
     //3. Create a SIMChargeViewController with your public api key
     
-    SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"lvpb_<#INSERT_YOUR_PUBLIC_KEY_HERE#>" paymentRequest:paymentRequest primaryColor:self.primaryColor];
+    SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_Nzg5ZDhmZGMtODdjMC00NDFmLThlZDYtM2Q0MTA2MjkyMmZj" paymentRequest:paymentRequest primaryColor:self.primaryColor];
     
     //4. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
     chargeController.delegate = self;
@@ -87,7 +90,6 @@
 }
 
 -(void)creditCardTokenFailedWithError:(NSError *)error {
-    
     //There was a problem generating the token
     NSLog(@"Card Token Generation failed with error:%@", error);
     SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Failure." description:@"There was a problem with the payment.\nPlease try again."];
@@ -102,9 +104,10 @@
     //Process Request on your own server
     //See https://github.com/simplifycom/simplify-php-server for a sample implementation.
     
-    NSURL *url= [NSURL URLWithString:@"<#INSERT_YOUR_SIMPLIFY_SERVER_HERE#>"];
+    NSURL *url= [NSURL URLWithString:@"https://floating-coast-33624.herokuapp.com/"];
     
     SIMWaitingView *waitingView = [[SIMWaitingView alloc] initWithFrame:self.view.frame];
+
     [self.view addSubview:waitingView];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
@@ -114,26 +117,27 @@
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
     NSURLSessionDataTask *paymentTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
         [waitingView removeFromSuperview];
-        
+
         NSString *responseData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         BOOL isResponseApproved = [responseData containsString:@"APPROVED"];
         NSLog(@"response:%@", responseData);
         
         if (error || !isResponseApproved) {
-            
-            NSLog(@"error:%@", error);
-            SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Failure." description:@"There was a problem with the payment.\nPlease try again."];
-            viewController.isPaymentSuccessful = NO;
-            [self presentViewController:viewController animated:YES completion:nil];
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"error:%@", error);
+                SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Failure." description:@"There was a problem with the payment.\nPlease try again."];
+                viewController.isPaymentSuccessful = NO;
+                [self presentViewController:viewController animated:YES completion:nil];
+            });
         } else {
-            
-            SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a pack of buttons!"];
-            viewController.isPaymentSuccessful = YES;
-            [self presentViewController:viewController animated:YES completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Success!" description:[NSString stringWithFormat:@"You purchased %@", self.title]];
+                viewController.isPaymentSuccessful = YES;
+                [self presentViewController:viewController animated:YES completion:nil];
+            });
         }
     }];
     

@@ -4,7 +4,11 @@
 <dict>
 	<key>com.apple.developer.in-app-payments</key>
 	<array>
-		<string>merchant.com.applepay</string>
+		<string>merchant.simplify</string>
+	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.simplify</string>
 	</array>
 </dict>
 </plist>

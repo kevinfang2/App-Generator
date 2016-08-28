@@ -60,11 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A31F8F51D729AFB008457AA /* SimplifyApplePayTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SimplifyApplePayTest.entitlements; sourceTree = "<group>"; };
 		1EE065C51D724E52008C1216 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		1EE065C61D724E52008C1216 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		1EE065C71D724E52008C1216 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
 		1EE065C81D724E52008C1216 /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
-		2CD3F7E51A793E5300A4DD48 /* SDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SDKDemo.entitlements; sourceTree = "<group>"; };
 		495EEF741923D0CA00AEC402 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49748F4B191829A400738BC9 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = ocmock/libOCMock.a; sourceTree = "<group>"; };
 		49748F4D191829A400738BC9 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
@@ -198,10 +198,10 @@
 		7ED9E9F81917E2930082C2C3 /* SimplifySDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A31F8F51D729AFB008457AA /* SimplifyApplePayTest.entitlements */,
 				1EE065CB1D724E58008C1216 /* Entities */,
 				1EE065C41D724E52008C1216 /* ViewControllers */,
 				00FA2DDF1D72857900F0E013 /* Images */,
-				2CD3F7E51A793E5300A4DD48 /* SDKDemo.entitlements */,
 				7ED9EA011917E2930082C2C3 /* SIMAppDelegate.h */,
 				7ED9EA021917E2930082C2C3 /* SIMAppDelegate.m */,
 				7EF1622F1925555A008F805A /* Storyboard.storyboard */,
@@ -258,6 +258,9 @@
 					7ED9E9EE1917E2930082C2C3 = {
 						DevelopmentTeam = W82EHQ5KSA;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.OMC = {
 								enabled = 1;
 							};
@@ -460,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SDKDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SimplifyApplePayTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -471,13 +474,13 @@
 					"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers",
 				);
 				INFOPLIST_FILE = "SimplifySDKSampleApp/SimplifySDKSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.simplify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bankhackathon;
 				PRODUCT_NAME = SimplifyApplePayTest;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -490,7 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SDKDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SimplifySDKSampleApp/SimplifyApplePayTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -501,13 +504,13 @@
 					"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers",
 				);
 				INFOPLIST_FILE = "SimplifySDKSampleApp/SimplifySDKSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.simplify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bankhackathon;
 				PRODUCT_NAME = SimplifyApplePayTest;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
