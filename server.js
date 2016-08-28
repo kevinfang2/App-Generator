@@ -3,6 +3,8 @@ var path = require('path');
 var fs = require('fs');
 var app = express();
 var firebase = require('firebase');
+var sleep = require('sleep');
+var archiver = require('archiver');
 
 app.set('view engine', 'ejs');
 
@@ -42,15 +44,13 @@ function data() {
 	var retString = "";
 	for (i in dataArray) {
 		var item = dataArray[i];
-		console.log(item);
 		var str = '[titles addObject:@"{0}"];\n\t[costs addObject:@"{1}"];\n\t[description addObject:@"{2}"];\n\t[images addObject:@"{3}"];'.format(item.Name, item.cost, item.Description, item.image.replace("data:image/png;base64,",""));
 		retString += str;
 	}
-	console.log(retString);
 	return retString;
 }
 
-app.post('/submit', function (req, res) {
+app.get('/submit', function (req, res) {
     console.log('submit pressed');
 	var populationData = data()
     fs.readFile("ItemsViewController.m", 'utf8', function (err,data) {
@@ -63,6 +63,23 @@ app.post('/submit', function (req, res) {
             if (err) return console.log(err);
         });
     });
+
+	var archive = archiver.create('zip', {});
+	res.setHeader('Content-Type', 'application/zip');
+	res.attachment('SimplifySDKSampleApp.zip');
+	archive.on('error', function(err) {
+		res.status(500).send({error: err.message});
+	});
+	//on stream closed we can end the request
+	res.on('close', function() {
+		console.log('Archive wrote %d bytes', archive.pointer());
+		// return res.status(200).send('OK').end();
+	});
+	//this is the streaming magic
+	archive.pipe(res);
+	var directory = 'SimplifySDKSampleApp/';
+	archive.directory(directory);
+	archive.finalize();
 });
 
 app.listen(3141)

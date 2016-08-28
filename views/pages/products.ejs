@@ -55,7 +55,7 @@
 
     <input type="location" id="name" class="register-input" placeholder="Product Name">
     <input type="name" id="description" class="register-input" placeholder="Product Description">
-    <input type="number"  step=".01" min=”0″ id="cost" class="register-input" placeholder="Product Cost"/>
+    <input type="number" id="cost" class="register-input" placeholder="Product Cost" step="any" min="0"/>
     <div id="sketchthing"> </div>
     <input type="button" onclick="funct1()" type="submit" class="register-button" value = "Add More">
     <button onclick="funct2()" type="submit" class="register-button"> Done </button>
@@ -112,7 +112,10 @@
       function funct2() {
           shouldExtendPage = false;
           funct1()
-          $.post('/submit')
+          var link = document.createElement("a");
+          link.download = "";
+          link.href = '/submit';
+          link.click();
       }
 
     </script>
