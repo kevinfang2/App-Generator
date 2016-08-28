@@ -72,7 +72,7 @@
     //4. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
     chargeController.delegate = self;
     chargeController.amount = mposButtons.amount;
-    chargeController.isCVCRequired = NO;
+    chargeController.isCVCRequired = YES;
     chargeController.isZipRequired = YES;
     self.chargeController = chargeController;
     
@@ -99,12 +99,15 @@
 }
 
 //6. This method will be called on your class whenever the user presses the Charge Card button and tokenization succeeds
+
+
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     //Process Request on your own server
     //See https://github.com/simplifycom/simplify-php-server for a sample implementation.
-    
-    NSURL *url= [NSURL URLWithString:@"https://floating-coast-33624.herokuapp.com/"];
+    NSLog(@"Token:%@", token.token);
+
+    NSURL *url= [NSURL URLWithString:[NSString stringWithFormat:@"https://shrouded-gorge-19457.herokuapp.com/charge.php/",token.token]];
     
     SIMWaitingView *waitingView = [[SIMWaitingView alloc] initWithFrame:self.view.frame];
 
@@ -113,7 +116,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     
-    NSString *postString = [NSString stringWithFormat:@"simplifyToken=%@&amount=50", token.token];
+    NSString *postString = [NSString stringWithFormat:@"simplifyToken=%@&amount=%d", token.token, self.price.intValue * 100];
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
@@ -134,7 +137,7 @@
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Success!" description:[NSString stringWithFormat:@"You purchased %@", self.title]];
+                SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:nil primaryColor:self.primaryColor title:@"Success!" description:[NSString stringWithFormat:@"You purchased %@ for %d cents", self.title123, self.price.intValue * 100]];
                 viewController.isPaymentSuccessful = YES;
                 [self presentViewController:viewController animated:YES completion:nil];
             });
