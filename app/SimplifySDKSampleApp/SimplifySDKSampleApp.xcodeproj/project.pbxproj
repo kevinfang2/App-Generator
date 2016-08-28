@@ -11,6 +11,7 @@
 		0AEFC2F71D736DC50001AC81 /* SimplifyMerchantSDK.xcodeproj in Frameworks */ = {isa = PBXBuildFile; fileRef = 4977D080191ABFE200AC621F /* SimplifyMerchantSDK.xcodeproj */; };
 		0AEFC2FD1D736DE10001AC81 /* SIMChargeCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEFC2FC1D736DE10001AC81 /* SIMChargeCardViewController.xib */; };
 		0AEFC2FF1D736E6C0001AC81 /* SIMResponseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEFC2FE1D736E6C0001AC81 /* SIMResponseViewController.xib */; };
+		0AEFC3031D73714A0001AC81 /* SIMLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFC3021D73714A0001AC81 /* SIMLandingViewController.m */; };
 		1EE065C91D724E52008C1216 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C61D724E52008C1216 /* ItemsViewController.m */; };
 		1EE065CA1D724E52008C1216 /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE065C81D724E52008C1216 /* SIMProductViewController.m */; };
 		7ED9E9F31917E2930082C2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED9E9F21917E2930082C2C3 /* Foundation.framework */; };
@@ -51,6 +52,8 @@
 		0A31F8F51D729AFB008457AA /* SimplifyApplePayTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SimplifyApplePayTest.entitlements; sourceTree = "<group>"; };
 		0AEFC2FC1D736DE10001AC81 /* SIMChargeCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SIMChargeCardViewController.xib; path = SimplifyMerchantSDK/SimplifyMerchantSDK/SIMChargeCardViewController.xib; sourceTree = "<group>"; };
 		0AEFC2FE1D736E6C0001AC81 /* SIMResponseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SIMResponseViewController.xib; path = SimplifyMerchantSDK/SimplifyMerchantSDK/SIMResponseViewController.xib; sourceTree = "<group>"; };
+		0AEFC3011D73714A0001AC81 /* SIMLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMLandingViewController.h; sourceTree = "<group>"; };
+		0AEFC3021D73714A0001AC81 /* SIMLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMLandingViewController.m; sourceTree = "<group>"; };
 		1EE065C51D724E52008C1216 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		1EE065C61D724E52008C1216 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		1EE065C71D724E52008C1216 /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		1EE065C41D724E52008C1216 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AEFC3011D73714A0001AC81 /* SIMLandingViewController.h */,
+				0AEFC3021D73714A0001AC81 /* SIMLandingViewController.m */,
 				1EE065C51D724E52008C1216 /* ItemsViewController.h */,
 				1EE065C61D724E52008C1216 /* ItemsViewController.m */,
 				1EE065C71D724E52008C1216 /* SIMProductViewController.h */,
@@ -343,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEFC3031D73714A0001AC81 /* SIMLandingViewController.m in Sources */,
 				1EE065C91D724E52008C1216 /* ItemsViewController.m in Sources */,
 				7ED9EA031917E2930082C2C3 /* SIMAppDelegate.m in Sources */,
 				1EE065CA1D724E52008C1216 /* SIMProductViewController.m in Sources */,
