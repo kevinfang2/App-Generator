@@ -55,20 +55,22 @@
 
     <input type="location" id="name" class="register-input" placeholder="Product Name">
     <input type="name" id="description" class="register-input" placeholder="Product Description">
+    <input type="name" id="cost" class="register-input" placeholder="Product Cost">
     <div id="sketchthing"> </div>
-    <input type="button" onclick="funct1()" type="submit" class="register-button" value = "Add More"> 
+    <input type="button" onclick="funct1()" type="submit" class="register-button" value = "Add More">
     <button onclick="funct2()" type="submit" class="register-button"> Done </button>
 
     <script>
       var firebase = require("/node_modules/firebase");
       var myFirebaseRef = new firebase("https://bankhackathon.firebaseio.com/");
-
+      var postsRef = myFirebaseRef.child("items");
       function funct1(){
         console.log("got here");
 
-        myFirebaseRef.push({
+        postsRef.push().set({
           Name: document.getElementById("name").value,
           Description: document.getElementById("description").value,
+          cost: document.getElementById("cost").value,
           image : btoa(document.getElementById("myFile").files),
         });
         extendPage()
