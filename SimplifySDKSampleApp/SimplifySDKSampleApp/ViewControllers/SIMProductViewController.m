@@ -13,7 +13,6 @@
 @property (nonatomic, strong) SIMChargeCardViewController *chargeController;
 @property (strong, nonatomic) IBOutlet UIButton *buyButton;
 @property (strong, nonatomic) UIColor *primaryColor;
-
 @end
 
 @implementation SIMProductViewController
@@ -21,6 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.priceLabel.text = self.price;
+    self.titleLabel.text = self.title;
+    self.productImage.image = self.image;
+    self.descriptionLabel.text = self.description;
+    
     self.primaryColor = [UIColor colorWithRed:241.0/255.0 green:100.0/255.0 blue:33.0/255.0 alpha:1.0];
     [self.buyButton setBackgroundColor:self.primaryColor];
     
