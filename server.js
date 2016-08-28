@@ -28,23 +28,24 @@ String.prototype.format = function() {
     return s;
 };
 
+var myFirebaseRef = new firebase("https://bankhackathon.firebaseio.com/");
+var dataArray = "";
+myFirebaseRef.on("value", function(snapshot) {
+	console.log("change detected");
+	var data = snapshot.val().items;
+	dataArray = Object.keys(data).map(function(k) { return data[k] });
+}, function (errorObject) {
+	console.log("The read failed: " + errorObject.code);
+});
+
 function data() {
-	var myFirebaseRef = new firebase("https://bankhackathon.firebaseio.com/");
-	var dataArray = "";
 	var retString = "";
-	console.log("MEM");
-	var ret = ""
-	myFirebaseRef.on("value", function(snapshot) {
-		var data = snapshot.val().items;
-		dataArray = Object.keys(data).map(function(k) { return data[k] });
-	}, function (errorObject) {
-		console.log("The read failed: " + errorObject.code);
-	});
 	for (i in dataArray) {
 		var item = dataArray[i];
 		var str = '[titles addObject:@"{0}"];\n\t[description addObject:@"{1}"];\n\t[images addObject:@"{2}"];'.format(item.Name, item.Description, item.image);
 		retString += str;
 	}
+	console.log(retString);
 	return retString;
 }
 
